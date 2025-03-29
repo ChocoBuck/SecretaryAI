@@ -1,0 +1,46 @@
+/* Define earth tone colors using CSS variables */
+:root {
+    --primary-color: #8B4513;      /* SaddleBrown */
+    --secondary-color: #F5F5DC;    /* Beige */
+    --accent-color: #808000;       /* Olive */
+    --highlight-color: #E2725B;    /* Terracotta */
+    --background-color: #FAF3E0;   /* Light Earth Tone */
+    --navbar-bg: #4E342E;          /* Dark Brown */
+    --navbar-text: #F5F5DC;        /* Beige text on dark navbar */
+}
+
+/* Apply the color palette to the body and text */
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--navbar-text) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--highlight-color) !important;
+}
+
+/* Button styling with earth tones */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Icon styling */
+.nav-link i {
+    color: var(--navbar-text);
+}
+
