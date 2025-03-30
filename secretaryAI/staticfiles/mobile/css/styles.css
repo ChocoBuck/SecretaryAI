@@ -1,0 +1,109 @@
+/* Define earth tone colors using CSS variables */
+:root {
+  --primary-color: #8B4513;      /* SaddleBrown */
+  --secondary-color: #F5F5DC;    /* Beige */
+  --accent-color: #808000;       /* Olive */
+  --highlight-color: #E2725B;    /* Terracotta */
+  --background-color: #FAF3E0;   /* Light Earth Tone */
+  --nav-bg: #4E342E;             /* Dark Brown */
+  --nav-text: #F5F5DC;           /* Beige text */
+}
+
+/* Global styling */
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Navigation Bar */
+.mobile-top-nav {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-right a {
+  color: var(--nav-text);
+  margin-left: 15px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/* Main Content */
+.mobile-content {
+  padding-top: 60px;    /* space for top nav */
+  padding-bottom: 70px; /* space for bottom nav */
+  min-height: calc(100vh - 130px);
+}
+
+/* Floating Chat Icon */
+.floating-chat {
+  position: fixed;
+  bottom: 80px; /* Adjust so it sits above the bottom nav */
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--nav-text);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1100;
+  font-size: 1.5em;
+}
+
+.floating-chat:hover {
+  background-color: var(--accent-color);
+}
+
+/* Bottom Navigation Bar */
+.mobile-bottom-nav {
+  background-color: var(--nav-bg);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.bottom-nav-icon {
+  color: var(--nav-text);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.bottom-nav-icon span {
+  font-size: 0.75em;
+  margin-top: 2px;
+}

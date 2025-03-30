@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mobile Version</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to the Mobile Site</h1>
-        <p>This version is optimized for mobile devices.</p>
-    </div>
-</body>
-</html>
+{% extends "mobile/mobile_base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container text-center">
+  <h1>Welcome to Your Mobile Assistant</h1>
+  <p>This is the Home page.</p>
+</div>
+{% endblock %}

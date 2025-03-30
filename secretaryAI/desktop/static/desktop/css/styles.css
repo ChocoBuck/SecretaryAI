@@ -5,42 +5,86 @@
     --accent-color: #808000;       /* Olive */
     --highlight-color: #E2725B;    /* Terracotta */
     --background-color: #FAF3E0;   /* Light Earth Tone */
-    --navbar-bg: #4E342E;          /* Dark Brown */
-    --navbar-text: #F5F5DC;        /* Beige text on dark navbar */
-}
-
-/* Apply the color palette to the body and text */
-body {
+    --nav-bg: #4E342E;             /* Dark Brown */
+    --nav-text: #F5F5DC;           /* Beige text */
+  }
+  
+  /* Global styling */
+  body {
     background-color: var(--background-color);
     color: var(--primary-color);
-}
-
-/* Style the navigation bar */
-.navbar {
-    background-color: var(--navbar-bg);
-}
-
-.navbar-brand, .navbar-nav .nav-link {
-    color: var(--navbar-text) !important;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--highlight-color) !important;
-}
-
-/* Button styling with earth tones */
-.btn-primary {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Top Navigation Bar */
+  .desktop-top-nav {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--nav-text) !important;
+    text-decoration: none;
+  }
+  
+  .desktop-core-nav .nav-link {
+    color: var(--nav-text);
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .desktop-core-nav .nav-link:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+  }
+  
+  .desktop-top-right .top-nav-icon {
+    color: var(--nav-text);
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+  
+  .desktop-top-right .top-nav-icon:hover {
+    color: var(--highlight-color);
+  }
+  
+  /* Main Content */
+  .desktop-content {
+    padding-top: 70px; /* Adjust if necessary */
+    padding-bottom: 20px;
+    min-height: calc(100vh - 70px);
+  }
+  
+  /* Floating Chat Icon */
+  .floating-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-primary:hover {
+    color: var(--nav-text);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1100;
+    font-size: 1.5em;
+  }
+  
+  .floating-chat:hover {
     background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-/* Icon styling */
-.nav-link i {
-    color: var(--navbar-text);
-}
-
+  }
+  

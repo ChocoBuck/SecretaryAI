@@ -1,0 +1,7 @@
+{% extends "mobile/mobile_base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<h1>Profile</h1>
+<p>User information and settings. (Settings can be linked here or on a separate page.)</p>
+<a href="{% url 'mobile:settings' %}">Go to Settings</a>
+{% endblock %}

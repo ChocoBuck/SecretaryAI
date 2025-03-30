@@ -20,3 +20,6 @@ def profile(request):
 
 def settings(request):
     return render(request, 'desktop/settings.html')
+
+def chatbot(request):
+    return render(request, 'desktop/chatbot.html')
